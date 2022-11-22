@@ -13,7 +13,7 @@ Site published at: [Tic-Tac-Toe](https://airidasju.github.io/tic-tac-toe/)
 ## 🎯 Project features/goals
 
 -   Github pages
--   [HTML](https://www.w3schools.com/TAGS/default.asp) and Tailwind
+-   [HTML](https://www.w3schools.com/TAGS/default.asp) and [Tailwind](https://tailwindcss.com/)
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## 🧰 Getting Started
