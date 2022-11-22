@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tic-Tac-Toe</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <div class="flex flex-col justify-center items-center space-y-10 bg-slate-900 h-screen">
+      <div
+        id="players"
+        class="flex flex-col justify-center items-center space-y-10 item w-auto h-auto mt-16"
+      >
+        <div class="item w-auto h-auto mb-10">
+          <span id="tic-tac"
+            class="text-7xl bg-rose-600 p-10 rounded-full text-neutral-900"
+            >Tic-Tac-Toe</span
+          >
+        </div>
+        <div
+          class="item w-auto h-auto grid overflow-hidden grid-cols-3 grid-rows-1 grid-flow-row gap-10"
+        >
+          <span
+            id="player-one"
+            class="text-3xl bg-teal-500 p-5 rounded-3xl"
+            >Player one<span>   0</span></span
+          >
+          <button id="reset" class="text-3xl bg-rose-600 p-5 rounded-3xl collapse text-neutral-900">RESET</button>
+
+          <span id="player-two" class="text-3xl bg-amber-500 p-5 rounded-3xl"
+            >Player two<span>   X</span></span
+          >
+        </div>
+      </div>
+      <div
+        id="board"
+        class="grid overflow-hidden grid-cols-3 gap-2 grid-rows-3 grid-flow-row bg-slate-900 rounded-xl border-slate-900 border-8 item w-auto h-auto"
+      >
+        <div class="h-40 w-40">
+          <button
+            value="1"
+            id="1"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="2"
+            id="2"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="3"
+            id="3"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="4"
+            id="4"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="5"
+            id="5"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="6"
+            id="6"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="7"
+            id="7"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="8"
+            id="8"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+        <div class="h-40 w-40">
+          <button
+            value="9"
+            id="9"
+            class="box bg-stone-300 h-40 w-40 rounded-lg text-8xl"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#players, #board{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#tic-tac {
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+*{
+    padding:0;
+    margin: 0;
+}
