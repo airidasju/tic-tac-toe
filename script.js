@@ -119,8 +119,8 @@ buttonGroup.addEventListener('click', function (event) {
       event.target.classList.add(symbolColor())
       arr258.push(event.target.textContent);
       arr123.push(event.target.textContent);
-      arr123.length = arr123.length < 3 ? arr123.length : 3;
-      arr258.length = arr258.length < 3 ? arr258.length : 3;
+      checkFull(arr123)
+      checkFull(arr258)
       break;
     case '3':
       event.target.textContent = changePlayer();
@@ -129,9 +129,9 @@ buttonGroup.addEventListener('click', function (event) {
       arr123.push(event.target.textContent);
       arr357.push(event.target.textContent);
       arr369.push(event.target.textContent);
-      arr123.length = arr123.length < 3 ? arr123.length : 3;
-      arr357.length = arr357.length < 3 ? arr357.length : 3;
-      arr369.length = arr369.length < 3 ? arr369.length : 3;
+      checkFull(arr123)
+      checkFull(arr357)
+      checkFull(arr369)
       break;
     case '4':
       event.target.textContent = changePlayer();
@@ -139,8 +139,8 @@ buttonGroup.addEventListener('click', function (event) {
       event.target.classList.add(symbolColor())
       arr456.push(event.target.textContent);
       arr147.push(event.target.textContent);
-      arr147.length = arr147.length < 3 ? arr147.length : 3;
-      arr456.length = arr456.length < 3 ? arr456.length : 3;
+      checkFull(arr147)
+      checkFull(arr456)
       break;
     case '5':
       event.target.textContent = changePlayer();
@@ -150,10 +150,10 @@ buttonGroup.addEventListener('click', function (event) {
       arr258.push(event.target.textContent);
       arr357.push(event.target.textContent);
       arr456.push(event.target.textContent);
-      arr159.length = arr159.length < 3 ? arr159.length : 3;
-      arr258.length = arr258.length < 3 ? arr258.length : 3;
-      arr357.length = arr357.length < 3 ? arr357.length : 3;
-      arr456.length = arr456.length < 3 ? arr456.length : 3;
+      checkFull(arr159)
+      checkFull(arr258)
+      checkFull(arr357)
+      checkFull(arr456)
       break;
     case '6':
       event.target.textContent = changePlayer();
@@ -161,8 +161,8 @@ buttonGroup.addEventListener('click', function (event) {
       event.target.classList.add(symbolColor())
       arr369.push(event.target.textContent);
       arr456.push(event.target.textContent);
-      arr369.length = arr369.length < 3 ? arr369.length : 3;
-      arr456.length = arr456.length < 3 ? arr456.length : 3;
+      checkFull(arr369)
+      checkFull(arr456)
       break;
     case '7':
       event.target.textContent = changePlayer();
@@ -171,9 +171,9 @@ buttonGroup.addEventListener('click', function (event) {
       arr147.push(event.target.textContent);
       arr357.push(event.target.textContent);
       arr789.push(event.target.textContent);
-      arr147.length = arr147.length < 3 ? arr147.length : 3;
-      arr357.length = arr357.length < 3 ? arr357.length : 3;
-      arr789.length = arr789.length < 3 ? arr789.length : 3;
+      checkFull(arr147)
+      checkFull(arr357)
+      checkFull(arr789)
       break;
     case '8':
       event.target.textContent = changePlayer();
@@ -181,8 +181,8 @@ buttonGroup.addEventListener('click', function (event) {
       event.target.classList.add(symbolColor())
       arr258.push(event.target.textContent);
       arr789.push(event.target.textContent);
-      arr258.length = arr258.length < 3 ? arr258.length : 3;
-      arr789.length = arr789.length < 3 ? arr789.length : 3;
+      checkFull(arr258)
+      checkFull(arr789)
       break;
     case '9':
       event.target.textContent = changePlayer();
@@ -191,9 +191,9 @@ buttonGroup.addEventListener('click', function (event) {
       arr159.push(event.target.textContent);
       arr369.push(event.target.textContent);
       arr789.push(event.target.textContent);
-      arr159.length = arr159.length < 3 ? arr159.length : 3;
-      arr789.length = arr789.length < 3 ? arr789.length : 3;
-      arr369.length = arr369.length < 3 ? arr369.length : 3;
+      checkFull(arr159)
+      checkFull(arr369)
+      checkFull(arr789)
       break;
   }
 
