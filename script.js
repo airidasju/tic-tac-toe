@@ -35,22 +35,22 @@ const boardButtons = document.querySelectorAll('button.bg-stone-300');
 
 function changePlayer() {
   if (player1) {
-    player1 = false;
     xo = 'O';
     playerOne.classList.add('border-solid', 'border-8', 'border-slate-200');
     playerTwo.classList.remove('border-solid', 'border-8', 'border-slate-200');
+    player1 = false;
   } else {
-    player1 = true;
     xo = 'X';
     playerTwo.classList.add('border-solid', 'border-8', 'border-slate-200');
     playerOne.classList.remove('border-solid', 'border-8', 'border-slate-200');
+    player1 = true;
   }
   return xo;
 }
 
 function symbolColor () {
   if(!player1) {
-    colorOfSymbol = "text-teal-500"
+    colorOfSymbol = "text-teal-500" 
   } else {
     colorOfSymbol = "text-amber-500"
   }
@@ -77,6 +77,7 @@ resetBtn.addEventListener('click', function () {
     elem.disabled = false;
     elem.textContent = '';
     elem.classList.remove('border-solid', 'border-8', winningColour);
+    elem.classList.remove("text-amber-500", "text-teal-500")
   });
   playerTwo.classList.remove('border-solid', 'border-8', 'border-slate-200');
   playerOne.classList.add('border-solid', 'border-8', 'border-slate-200');
@@ -86,6 +87,12 @@ resetBtn.addEventListener('click', function () {
 });
 
 const buttonGroup = document.getElementById('board');
+
+function checkFull (arr) {
+  arr.length = arr.length < 3 ? arr.length : 3;
+}
+
+
 
 buttonGroup.addEventListener('click', function (event) {
   const isButton = event.target.nodeName === 'BUTTON';
@@ -102,9 +109,9 @@ buttonGroup.addEventListener('click', function (event) {
       arr123.push(event.target.textContent);
       arr159.push(event.target.textContent);
       arr147.push(event.target.textContent);
-      arr123.length = arr123.length < 3 ? arr123.length : 3;
-      arr147.length = arr147.length < 3 ? arr147.length : 3;
-      arr159.length = arr159.length < 3 ? arr159.length : 3;
+      checkFull(arr123)
+      checkFull(arr147)
+      checkFull(arr159)
       break;
     case '2':
       event.target.textContent = changePlayer();
