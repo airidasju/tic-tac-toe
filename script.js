@@ -7,12 +7,12 @@ let arr369 = [];
 let arr456 = [];
 let arr789 = [];
 
-let winner = ""
 let value;
+let winner = '';
 let ticTac = document.getElementById('tic-tac');
 
 let xo;
-let colorOfSymbol
+let colorOfSymbol;
 
 const playerOne = document.getElementById('player-one');
 const playerTwo = document.getElementById('player-two');
@@ -31,6 +31,7 @@ const six = document.getElementById('6');
 const seven = document.getElementById('7');
 const eight = document.getElementById('8');
 const nine = document.getElementById('9');
+
 const boardButtons = document.querySelectorAll('button.bg-stone-300');
 
 function changePlayer() {
@@ -48,13 +49,13 @@ function changePlayer() {
   return xo;
 }
 
-function symbolColor () {
-  if(!player1) {
-    colorOfSymbol = "text-teal-500" 
+function symbolColor() {
+  if (!player1) {
+    colorOfSymbol = 'text-teal-500';
   } else {
-    colorOfSymbol = "text-amber-500"
+    colorOfSymbol = 'text-amber-500';
   }
-  return colorOfSymbol
+  return colorOfSymbol;
 }
 
 function addBorder(numOne, numTwo, numThree) {
@@ -77,22 +78,21 @@ resetBtn.addEventListener('click', function () {
     elem.disabled = false;
     elem.textContent = '';
     elem.classList.remove('border-solid', 'border-8', winningColour);
-    elem.classList.remove("text-amber-500", "text-teal-500")
+    elem.classList.remove('text-amber-500', 'text-teal-500');
   });
   playerTwo.classList.remove('border-solid', 'border-8', 'border-slate-200');
   playerOne.classList.add('border-solid', 'border-8', 'border-slate-200');
   winner = '';
   player1 = true;
-  ticTac.textContent = "TIC-TAC-TOE"
+  ticTac.textContent = 'Tic-Tac-Toe';
 });
 
 const buttonGroup = document.getElementById('board');
 
-function checkFull (arr) {
+function checkArray(arr) {
   arr.length = arr.length < 3 ? arr.length : 3;
+  arr.push(event.target.textContent);
 }
-
-
 
 buttonGroup.addEventListener('click', function (event) {
   const isButton = event.target.nodeName === 'BUTTON';
@@ -100,100 +100,75 @@ buttonGroup.addEventListener('click', function (event) {
     return;
   }
   value = event.target.value;
-  
   switch (value) {
     case '1':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr123.push(event.target.textContent);
-      arr159.push(event.target.textContent);
-      arr147.push(event.target.textContent);
-      checkFull(arr123)
-      checkFull(arr147)
-      checkFull(arr159)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr147);
+      checkArray(arr159);
       break;
     case '2':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr258.push(event.target.textContent);
-      arr123.push(event.target.textContent);
-      checkFull(arr123)
-      checkFull(arr258)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr258);
       break;
     case '3':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr123.push(event.target.textContent);
-      arr357.push(event.target.textContent);
-      arr369.push(event.target.textContent);
-      checkFull(arr123)
-      checkFull(arr357)
-      checkFull(arr369)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr357);
+      checkArray(arr369);
       break;
     case '4':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr456.push(event.target.textContent);
-      arr147.push(event.target.textContent);
-      checkFull(arr147)
-      checkFull(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr147);
+      checkArray(arr456);
       break;
     case '5':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr159.push(event.target.textContent);
-      arr258.push(event.target.textContent);
-      arr357.push(event.target.textContent);
-      arr456.push(event.target.textContent);
-      checkFull(arr159)
-      checkFull(arr258)
-      checkFull(arr357)
-      checkFull(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr159);
+      checkArray(arr258);
+      checkArray(arr357);
+      checkArray(arr456);
       break;
     case '6':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr369.push(event.target.textContent);
-      arr456.push(event.target.textContent);
-      checkFull(arr369)
-      checkFull(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr369);
+      checkArray(arr456);
       break;
     case '7':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr147.push(event.target.textContent);
-      arr357.push(event.target.textContent);
-      arr789.push(event.target.textContent);
-      checkFull(arr147)
-      checkFull(arr357)
-      checkFull(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr147);
+      checkArray(arr357);
+      checkArray(arr789);
       break;
     case '8':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr258.push(event.target.textContent);
-      arr789.push(event.target.textContent);
-      checkFull(arr258)
-      checkFull(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr258);
+      checkArray(arr789);
       break;
     case '9':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      arr159.push(event.target.textContent);
-      arr369.push(event.target.textContent);
-      arr789.push(event.target.textContent);
-      checkFull(arr159)
-      checkFull(arr369)
-      checkFull(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr159);
+      checkArray(arr369);
+      checkArray(arr789);
       break;
   }
 
@@ -290,7 +265,7 @@ buttonGroup.addEventListener('click', function (event) {
     boardButtons.forEach((elem) => {
       elem.disabled = true;
       resetBtn.classList.remove('collapse');
-      ticTac.textContent = winner
+      ticTac.textContent = winner;
     });
   }
   if (
@@ -301,12 +276,13 @@ buttonGroup.addEventListener('click', function (event) {
     arr357.length == 3 &&
     arr369.length == 3 &&
     arr456.length == 3 &&
-    arr789.length == 3 && winner == ""
+    arr789.length == 3 &&
+    winner == ''
   ) {
     boardButtons.forEach((elem) => {
       elem.disabled = true;
     });
     resetBtn.classList.remove('collapse');
-    ticTac.textContent = "DRAW"
+    ticTac.textContent = 'DRAW';
   }
 });
