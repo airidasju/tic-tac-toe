@@ -8,11 +8,11 @@ let arr456 = [];
 let arr789 = [];
 
 let value;
-let winner = ""
+let winner = '';
 let ticTac = document.getElementById('tic-tac');
 
 let xo;
-let colorOfSymbol
+let colorOfSymbol;
 
 const playerOne = document.getElementById('player-one');
 const playerTwo = document.getElementById('player-two');
@@ -49,20 +49,20 @@ function changePlayer() {
   return xo;
 }
 
-function symbolColor () {
-  if(!player1) {
-    colorOfSymbol = "text-teal-500" 
+function symbolColor() {
+  if (!player1) {
+    colorOfSymbol = 'text-teal-500';
   } else {
-    colorOfSymbol = "text-amber-500"
+    colorOfSymbol = 'text-amber-500';
   }
-  return colorOfSymbol
+  return colorOfSymbol;
 }
 
-// function addBorder(arr) {
-//   arr[0].classList.add('border-solid', 'border-8', winningColour);
-//   arr[1].classList.add('border-solid', 'border-8', winningColour);
-//   arr[2].classList.add('border-solid', 'border-8', winningColour);
-// }
+function addBorder(numOne, numTwo, numThree) {
+  numOne.classList.add('border-solid', 'border-8', winningColour);
+  numTwo.classList.add('border-solid', 'border-8', winningColour);
+  numThree.classList.add('border-solid', 'border-8', winningColour);
+}
 
 resetBtn.addEventListener('click', function () {
   resetBtn.classList.add('collapse');
@@ -78,214 +78,194 @@ resetBtn.addEventListener('click', function () {
     elem.disabled = false;
     elem.textContent = '';
     elem.classList.remove('border-solid', 'border-8', winningColour);
-    elem.classList.remove("text-amber-500", "text-teal-500")
+    elem.classList.remove('text-amber-500', 'text-teal-500');
   });
   playerTwo.classList.remove('border-solid', 'border-8', 'border-slate-200');
   playerOne.classList.add('border-solid', 'border-8', 'border-slate-200');
   winner = '';
   player1 = true;
-  ticTac.textContent = "Tic-Tac-Toe"
+  ticTac.textContent = 'Tic-Tac-Toe';
 });
 
 const buttonGroup = document.getElementById('board');
 
-
-const allEqual = (arr) => arr.every((val) => val === arr[0]);
-
-function checkArray (arr) {
+function checkArray(arr) {
   arr.length = arr.length < 3 ? arr.length : 3;
-  arr.push(event.target.textContent)
-
-  if (allEqual(arr) && arr.length == 3) {
-    if (arr[0] == 'O') {
-      winner = 'Player One has won';
-      winningColour = 'border-teal-500';
-      // arr[0].classList.add('border-solid', 'border-8', winningColour);
-      // arr[1].classList.add('border-solid', 'border-8', winningColour);
-      // arr[2].classList.add('border-solid', 'border-8', winningColour);
-    } else if (arr[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
-      // arr[0].classList.add('border-solid', 'border-8', winningColour);
-      // arr[1].classList.add('border-solid', 'border-8', winningColour);
-      // arr[2].classList.add('border-solid', 'border-8', winningColour);
-    }
-  }
+  arr.push(event.target.textContent);
 }
-
 
 buttonGroup.addEventListener('click', function (event) {
   const isButton = event.target.nodeName === 'BUTTON';
   if (!isButton) {
     return;
   }
-  value = event.target.value
+  value = event.target.value;
   switch (value) {
     case '1':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr123)
-      checkArray(arr147)
-      checkArray(arr159)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr147);
+      checkArray(arr159);
       break;
     case '2':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr123)
-      checkArray(arr258)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr258);
       break;
     case '3':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr123)
-      checkArray(arr357)
-      checkArray(arr369)
+      event.target.classList.add(symbolColor());
+      checkArray(arr123);
+      checkArray(arr357);
+      checkArray(arr369);
       break;
     case '4':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr147)
-      checkArray(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr147);
+      checkArray(arr456);
       break;
     case '5':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr159)
-      checkArray(arr258)
-      checkArray(arr357)
-      checkArray(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr159);
+      checkArray(arr258);
+      checkArray(arr357);
+      checkArray(arr456);
       break;
     case '6':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr369)
-      checkArray(arr456)
+      event.target.classList.add(symbolColor());
+      checkArray(arr369);
+      checkArray(arr456);
       break;
     case '7':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr147)
-      checkArray(arr357)
-      checkArray(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr147);
+      checkArray(arr357);
+      checkArray(arr789);
       break;
     case '8':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr258)
-      checkArray(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr258);
+      checkArray(arr789);
       break;
     case '9':
       event.target.textContent = changePlayer();
       event.target.disabled = true;
-      event.target.classList.add(symbolColor())
-      checkArray(arr159)
-      checkArray(arr369)
-      checkArray(arr789)
+      event.target.classList.add(symbolColor());
+      checkArray(arr159);
+      checkArray(arr369);
+      checkArray(arr789);
       break;
   }
 
-  // const allEqual = (arr) => arr.every((val) => val === arr[0]);
-  // if (allEqual(arr123) && arr123.length == 3) {
-  //   if (arr123[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(one, two, three);
-  //   } else if (arr123[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(one, two, three);
-  //   }
-  // }
-  // if (allEqual(arr159) && arr159.length == 3) {
-  //   if (arr159[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(one, five, nine);
-  //   } else if (arr159[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(one, five, nine);
-  //   }
-  // }
-  // if (allEqual(arr147) && arr147.length == 3) {
-  //   if (arr147[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(one, four, seven);
-  //   } else if (arr147[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(one, four, seven);
-  //   }
-  // }
-  // if (allEqual(arr258) && arr258.length == 3) {
-  //   if (arr258[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(two, five, eight);
-  //   } else if (arr258[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(two, five, eight);
-  //   }
-  // }
-  // if (allEqual(arr357) && arr357.length == 3) {
-  //   if (arr357[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(three, five, seven);
-  //   } else if (arr357[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(three, five, seven);
-  //   }
-  // }
-  // if (allEqual(arr369) && arr369.length == 3) {
-  //   if (arr369[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(three, six, nine);
-  //   } else if (arr369[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(three, six, nine);
-  //   }
-  // }
-  // if (allEqual(arr456) && arr456.length == 3) {
-  //   if (arr456[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(four, five, six);
-  //   } else if (arr456[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(four, five, six);
-  //   }
-  // }
-  // if (allEqual(arr789) && arr789.length == 3) {
-  //   if (arr789[0] == 'O') {
-  //     winner = 'Player One has won';
-  //     winningColour = 'border-teal-500';
-  //     addBorder(seven, eight, nine);
-  //   } else if (arr789[0] == 'X') {
-  //     winner = 'Player Two has won';
-  //     winningColour = 'border-amber-500';
-  //     addBorder(seven, eight, nine);
-  //   }
-  // }
+  const allEqual = (arr) => arr.every((val) => val === arr[0]);
+  if (allEqual(arr123) && arr123.length == 3) {
+    if (arr123[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(one, two, three);
+    } else if (arr123[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(one, two, three);
+    }
+  }
+  if (allEqual(arr159) && arr159.length == 3) {
+    if (arr159[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(one, five, nine);
+    } else if (arr159[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(one, five, nine);
+    }
+  }
+  if (allEqual(arr147) && arr147.length == 3) {
+    if (arr147[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(one, four, seven);
+    } else if (arr147[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(one, four, seven);
+    }
+  }
+  if (allEqual(arr258) && arr258.length == 3) {
+    if (arr258[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(two, five, eight);
+    } else if (arr258[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(two, five, eight);
+    }
+  }
+  if (allEqual(arr357) && arr357.length == 3) {
+    if (arr357[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(three, five, seven);
+    } else if (arr357[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(three, five, seven);
+    }
+  }
+  if (allEqual(arr369) && arr369.length == 3) {
+    if (arr369[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(three, six, nine);
+    } else if (arr369[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(three, six, nine);
+    }
+  }
+  if (allEqual(arr456) && arr456.length == 3) {
+    if (arr456[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(four, five, six);
+    } else if (arr456[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(four, five, six);
+    }
+  }
+  if (allEqual(arr789) && arr789.length == 3) {
+    if (arr789[0] == 'O') {
+      winner = 'Player One has won';
+      winningColour = 'border-teal-500';
+      addBorder(seven, eight, nine);
+    } else if (arr789[0] == 'X') {
+      winner = 'Player Two has won';
+      winningColour = 'border-amber-500';
+      addBorder(seven, eight, nine);
+    }
+  }
   if (winner) {
     boardButtons.forEach((elem) => {
       elem.disabled = true;
       resetBtn.classList.remove('collapse');
-      ticTac.textContent = winner
+      ticTac.textContent = winner;
     });
   }
   if (
@@ -296,12 +276,13 @@ buttonGroup.addEventListener('click', function (event) {
     arr357.length == 3 &&
     arr369.length == 3 &&
     arr456.length == 3 &&
-    arr789.length == 3 && winner == ""
+    arr789.length == 3 &&
+    winner == ''
   ) {
     boardButtons.forEach((elem) => {
       elem.disabled = true;
     });
     resetBtn.classList.remove('collapse');
-    ticTac.textContent = "DRAW"
+    ticTac.textContent = 'DRAW';
   }
 });
