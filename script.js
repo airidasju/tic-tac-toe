@@ -186,8 +186,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr123[0] == 'O') {
       addBorder(one, two, three);
     } else if (arr123[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(one, two, three);
     }
   }
@@ -195,8 +193,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr159[0] == 'O') {
       addBorder(one, five, nine);
     } else if (arr159[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(one, five, nine);
     }
   }
@@ -204,8 +200,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr147[0] == 'O') {
       addBorder(one, four, seven);
     } else if (arr147[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(one, four, seven);
     }
   }
@@ -213,8 +207,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr258[0] == 'O') {
       addBorder(two, five, eight);
     } else if (arr258[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(two, five, eight);
     }
   }
@@ -222,8 +214,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr357[0] == 'O') {
       addBorder(three, five, seven);
     } else if (arr357[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(three, five, seven);
     }
   }
@@ -231,8 +221,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr369[0] == 'O') {
       addBorder(three, six, nine);
     } else if (arr369[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(three, six, nine);
     }
   }
@@ -240,8 +228,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr456[0] == 'O') {
       addBorder(four, five, six);
     } else if (arr456[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(four, five, six);
     }
   }
@@ -249,8 +235,6 @@ buttonGroup.addEventListener('click', function (event) {
     if (arr789[0] == 'O') {
       addBorder(seven, eight, nine);
     } else if (arr789[0] == 'X') {
-      winner = 'Player Two has won';
-      winningColour = 'border-amber-500';
       addBorder(seven, eight, nine);
     }
   }
