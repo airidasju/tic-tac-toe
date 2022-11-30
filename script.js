@@ -94,10 +94,10 @@ function checkArray(arr) {
   arr.length = arr.length < 3 ? arr.length : 3;
   arr.push(event.target.textContent);
   if (allEqual(arr) && arr.length == 3) {
-    if (arr123[0] == 'O') {
+    if (arr[0] == 'O') {
       winner = 'Player One has won';
       winningColour = 'border-teal-500';
-    } else if (arr123[0] == 'X') {
+    } else if (arr[0] == 'X') {
       winner = 'Player Two has won';
       winningColour = 'border-amber-500';
     }
